@@ -1,0 +1,49 @@
+.nuts {
+  min-height: 390px;
+  background-color: white;
+  border-radius: 10px;
+  background-image: url(../images/bg-nuts.png);
+  background-repeat: no-repeat;
+  background-position-x: 100%;
+  padding: 30px 40px;
+}
+
+.nuts__text {
+  max-width: 547px;
+}
+
+.nuts__header {
+  font-family: PTSansNarrowBold;
+  font-size: 48px;
+  text-transform: uppercase;
+  padding-bottom: 25px;
+  span {
+    color: #FB4C2C;
+  }
+}
+
+.nuts__description {
+  font-size: 17px;
+  line-height: 26px;
+  span {
+    text-transform: uppercase;
+    font-family: PTSansBold;
+  }
+}
+
+@media (max-width: 1000px) {
+  .nuts {
+    background-image: none;
+    min-height: 100px;
+  }
+  .nuts__text {
+    max-width: 100%;
+    background-image: none;
+  }
+}
+
+@media (max-width: 605px) {
+  .nuts {
+    margin-top: 30px;
+  }
+}

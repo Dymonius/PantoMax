@@ -1,8 +1,8 @@
 .hero {
   color: white;
-  min-height: 751px;
+  min-height: 730px;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: -320px 0;
   background-image: url(../images/bg-big.png);
 }
 
@@ -11,7 +11,6 @@
   align-items: center;
   height: 85px;
   font-size: 18px;
-
 }
 
 .logo {
@@ -34,7 +33,6 @@
   background-repeat: no-repeat;
   background-position: 0 center;
   background-image: url(../images/icons/big-finger.png);
-
 }
 
 .hero__header-span {
@@ -65,18 +63,22 @@
 .description {
   width: 34.694%;
 
+  .description__product-image {
+    margin-top: 15px;
+  }
+
   &__header {
     font-size: 22px;
     line-height: 28px;
     font-family: RobotoMedium;
     padding-top: 20px;
-    padding-bottom: 20px;
+    padding-bottom: 10px;
   }
 
   &__item {
     position: relative;
     line-height: 35px;
-    .description__text{
+    .description__text {
       padding-left: 15px;
     }
     .description__text:before {
@@ -90,15 +92,16 @@
       background-image: -webkit-linear-gradient(left, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0));
       background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0));
     }
-    .description__text--last{
+    .description__text--last {
       padding-left: 15px;
     }
-    .description__text--last:before{
+    .description__text--last:before {
       height: 0;
     }
     .br-text {
       position: absolute;
       top: 25px;
+      left: 40px;
     }
     .logo-ok {
       display: inline-block;
@@ -123,7 +126,6 @@
       transform: rotate(-45deg);
     }
 
-
   }
 }
 
@@ -132,15 +134,218 @@
   align-self: flex-end;
   text-align: center;
 }
-.discount__text{
+
+.discount__text {
   padding-bottom: 73px;
   padding-top: 15px;
   font-size: 19px;
-  font-family:PTSansNarrowRegular;
+  font-family: PTSansNarrowRegular;
 }
 
 .form-section {
   width: 29.59%;
+  padding-top: 20px;
+  padding-bottom: 0;
+}
+
+.counter {
+  display: flex;
+}
+
+.counter__digits {
+  display: flex;
+  font-size: 50px;
+  font-family: PTSansNarrowBold;
+  text-align: center;
+}
+
+.counter__digit {
+  width: 48px;
+  height: 55px;
+  color: black;
+  box-shadow: 0 2px 3px rgba(27, 27, 27, 0.55), inset 0 1px 2px rgba(255, 255, 255, 0.15);
+  border: 1px solid #ffffff;
+  border-radius: 3px;
+  background-color: #f6f6f6;
+  margin-right: 5px;
+  position: relative;
+}
+
+.counter__digit:before {
+  content: "";
+  position: absolute;
+  @include centerer-y;
+  left: -1px;
+  width: 48px;
+  border-bottom: 2px solid #CDCDCD;
+  opacity: 0.5
+}
+
+.counter__digit--transparent {
+  opacity: 0.5;
+}
+
+.counter__text {
+  position: relative;
+  font-family: PTSansNarrowRegular;
+  font-size: 19px;
+  padding-left: 24px;
+  align-self: center;
+  span {
+    position: absolute;
+    left: 15px;
+  }
+}
+
+.form {
+  position: relative;
+  margin: 30px auto 0;
+  width: 290px;
+  height: 410px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 0 40px rgba(254, 213, 91, 0.25);
+}
+
+.form:before {
+  content: '';
+  background: url(../images/shine.png) no-repeat;
+  width: 115px;
+  height: 21px;
+  position: absolute;
+  top: -10px;
+  left: 10px;
+}
+
+.form__price {
+  display: flex;
+  background: url(../images/price-bg.png) no-repeat;
+  width: 290px;
+  height: 117px;
+  padding-top: 20px;
+  font-family: PTSansNarrowRegular;
+}
+
+.form__old-price {
+  width: 60%;
+  padding-left: 25px;
+  color: #ffffff;
+  opacity: 0.3;
+
+  div {
+    font-size: 18px;
+  }
+  .big-digits {
+    font-size: 48px;
+    text-decoration: line-through;
+    line-height: 60px;
+  }
+  .small {
+    font-size: 24px;
+  }
+}
+
+.form__new-price {
+  width: 40%;
+  div {
+    font-size: 18px;
+  }
+  .big-digits {
+    font-size: 48px;
+    font-family: PTSansNarrowBold;
+    line-height: 60px;
+  }
+  .small {
+    font-size: 24px;
+  }
+}
+
+
+
+form {
+  width: 255px;
+  margin: 15px auto 0;
+}
+
+form input {
+  width: 100%;
+  margin-bottom: 15px;
+  height: 55px;
+  background-color: #f6f6f6;
+  border: 1px solid #e1e1e1;
+  border-radius: 5px;
+  padding-left: 15px;
+  font-family:OpenSansRegular;
+}
+
+form button {
+  cursor: pointer;
+  position: relative;
+  margin-top: 10px;
+  padding-left: 50px;
+  width: 100%;
+  height: 60px;
+  border: none;
+  background-image: linear-gradient(to top, #d73f17 0%, #fa4a1b 100%);
+  border-radius: 5px;
+  box-shadow: 2.5px 4.3px 25px rgba(250, 74, 27, 0.35);
+  color: white;
+  font-size: 22px;
+  font-family:PTSansNarrowBold;
+  text-transform: uppercase;
+}
+
+form button span {
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 51px;
+  height: 100%;
+  border-radius: 5px 0 0 5px;
+  background-color: #b13412;
+}
+
+form button span:before {
+  content: '';
+  position: absolute;
+  background: #fff;
+  width: 13px;
+  height: 4px;
+  top: 24px;
+  left: 20px;
+  transform: rotate(45deg);
+}
+
+form button span:after {
+  content: '';
+  position: absolute;
+  background: #fff;
+  width: 13px;
+  height: 4px;
+  top: 30px;
+  left: 20px;
+  transform: rotate(-45deg);
+}
+
+.form__security {
+  position: relative;
+  margin-top: 20px;
+  text-align: center;
+  color: black;
+  font-size: 15px;
+  font-family:PTSansNarrowRegular;
+}
+
+.form__security:before {
+  background-image: url(../images/security.png);
+  width: 13px;
+  height: 17px;
+  content: '';
+  position: relative;
+  top: 2px;
+  display: inline-block;
+  margin-right: 10px;
 }
 
 @media (max-width: 1000px) {
@@ -157,6 +362,48 @@
   }
   .hero__how-much {
     text-align: center;
+    font-size: 45px;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  .hero__main {
+    flex-direction: column;
+    align-items:center;
+  }
+  .description{
+    width: 340px;
+  }
+  .description__product-image {
+    margin-top: 20px;
+  }
+  .discount {
+    align-self: center;
+    width: 350px;
+  }
+  .discount__text{
+    padding-bottom: 0;
+  }
+  .form-section{
+    width: 290px;
+  }
+}
+
+@media (max-width: 400px) {
+  .hero__how-much{
+    font-size: 30px;
+    padding: 0;
+  }
+  .description{
+    width: 100%;
+  }
+  .discount {
+    align-self: center;
+    width: 100%;
+  }
+
+  .form-section{
+    width: 100%;
   }
 
 }

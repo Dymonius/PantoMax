@@ -1,6 +1,7 @@
 body {
   font-family: PTSansRegular;
 }
+
 @media (max-width: 1000px) {
   body {
     min-height: 751px;
@@ -9,6 +10,7 @@ body {
     background-repeat: no-repeat;
   }
 }
+
 html {
   box-sizing: border-box;
   font-size: 16px;
@@ -21,10 +23,13 @@ img {
   max-width: 100%;
 }
 
+picture {
+  max-width: 100%;
+}
+
 *, *:before, *:after {
   box-sizing: inherit;
 }
-
 
 a:hover, a {
   color: inherit;
